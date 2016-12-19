@@ -18,9 +18,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Plugins to load for zsh
 if [[ "$(uname)" == "Darwin" ]]; then
-  plugins=(git aws composer wd osx sudo brew vim pass)
+  plugins=(git aws composer wd osx sudo brew vim pass vagrant)
 else
-  plugins=(git aws composer wd sudo vim pass debian)
+  plugins=(git aws composer wd sudo vim pass debiani vagrant) 
 fi
 
 HIST_STAMPS="dd.mm.yyyy"
@@ -33,3 +33,4 @@ fi
 
 #Load the oh-my-zsh config
 source "${ZSH}/oh-my-zsh.sh"
+export PATH="/usr/local/sbin:$PATH"
