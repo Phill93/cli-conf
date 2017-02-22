@@ -12,7 +12,7 @@ system=$(uname)
 if [ "${system}" == "Darwin" ]; then
 	#Prepare the computer, install brew etc.
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew install htop tmux vim tree wget iperf python3 ssh-copy-id wakeonlan cowsay fortune atom git-extras
+	brew install htop tmux vim tree wget iperf python3 ssh-copy-id wakeonlan cowsay fortune Caskroom/cask/atom git-extras
 elif [ "${system}" == "Linux" ]; then
 	if [ -f /etc/debian_version ]; then
     sudo apt-get update
