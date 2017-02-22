@@ -25,7 +25,7 @@ elif [ "${system}" == "Linux" ]; then
 	fi
 fi
 #Install atom packages
-apm install git-plus git-projects minimap minimap-cursorline minimap-git-diff tree-view-git-status keyboard-localization
+apm install git-plus git-projects minimap minimap-cursorline minimap-git-diff tree-view-git-status atom-jinja2
 
 #Remove any already existing file
 rm "${HOME}/.ansi-colors"
