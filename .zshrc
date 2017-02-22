@@ -18,9 +18,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Plugins to load for zsh
 if [[ "$(uname)" == "Darwin" ]]; then
-  plugins=(git aws composer wd osx sudo brew vim pass)
+  plugins=(git aws composer wd osx sudo brew vim pass git-extras)
 else
-  plugins=(git aws composer wd sudo vim pass debian)
+  plugins=(git aws composer wd sudo vim pass debian git-extras)
 fi
 
 HIST_STAMPS="dd.mm.yyyy"
