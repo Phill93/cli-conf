@@ -16,7 +16,7 @@ if [ "${system}" == "Darwin" ]; then
 elif [ "${system}" == "Linux" ]; then
 	if [ -f /etc/debian_version ]; then
     		sudo apt-get update
-		sudo apt-get install htop tmux tree wget curl iperf python3 wakeonlan cowsay fortune software-properties-common python-software-properties git-extras -y
+		sudo apt-get install htop tmux tree wget curl iperf python3 wakeonlan cowsay fortune software-properties-common python-software-properties git-extras zsh -y
 		sudo add-apt-repository ppa:webupd8team/atom -y
 		sudo apt-get update
 		sudo apt-get install atom
