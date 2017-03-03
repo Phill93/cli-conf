@@ -12,7 +12,7 @@ system=$(uname)
 if [ "${system}" == "Darwin" ]; then
 	#Prepare the computer, install brew etc.
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew install htop tmux vim tree wget iperf python3 ssh-copy-id wakeonlan cowsay fortune Caskroom/cask/atom git-extras zsh
+	brew install htop tmux vim tree wget iperf python3 ssh-copy-id wakeonlan cowsay fortune Caskroom/cask/atom git-extras Caskroom/cask/spotify zsh
 elif [ "${system}" == "Linux" ]; then
 	if [ -f /etc/debian_version ]; then
     sudo apt-get update
@@ -20,12 +20,16 @@ elif [ "${system}" == "Linux" ]; then
 		sudo add-apt-repository ppa:webupd8team/atom -y
 		sudo apt-get update
 		sudo apt-get install atom -y
+		sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
+		echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+		sudo apt-get update
+		sudo apt-get install spotify-client -y
 	elif [ -f /etc/redhat-release ]; then
     echo "RedHat based distros are not supported!"
 	fi
 fi
 #Install atom packages
-apm install git-plus git-projects minimap minimap-cursorline minimap-git-diff tree-view-git-status atom-jinja2
+apm install git-plus git-projects minimap minimap-cursorline minimap-git-diff tree-view-git-status atom-jinja2 platformio-ide
 
 #Remove any already existing file
 rm "${HOME}/.ansi-colors"
