@@ -12,14 +12,14 @@ system=$(uname)
 if [ "${system}" == "Darwin" ]; then
 	#Prepare the computer, install brew etc.
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew install htop tmux vim tree wget iperf python3 ssh-copy-id wakeonlan cowsay fortune Caskroom/cask/atom git-extras
+	brew install htop tmux vim tree wget iperf python3 ssh-copy-id wakeonlan cowsay fortune Caskroom/cask/atom git-extras zsh
 elif [ "${system}" == "Linux" ]; then
 	if [ -f /etc/debian_version ]; then
     sudo apt-get update
-		sudo apt-get install htop tmux tree wget curl iperf python3 wakeonlan cowsay fortune software-properties-common python-software-properties git-extras -y
+		sudo apt-get install htop tmux tree wget curl iperf python3 wakeonlan cowsay fortune software-properties-common python-software-properties git-extras build-essential zsh -y
 		sudo add-apt-repository ppa:webupd8team/atom -y
 		sudo apt-get update
-		sudo apt-get install atom
+		sudo apt-get install atom -y
 	elif [ -f /etc/redhat-release ]; then
     echo "RedHat based distros are not supported!"
 	fi
